@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CP Delight</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Sarabun', sans-serif;
+      margin: 0;
+      background-color: #f9fbe7;
+      color: #333;
+    }
+    header {
+      background-color: #fffde7;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #388e3c;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #333;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #e8f5e9;
+    }
+    .hero h1 {
+      font-size: 28px;
+      color: #2e7d32;
+    }
+    .hero p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    .hero button {
+      background-color: #66bb6a;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .section {
+      padding: 30px 20px;
+    }
+    .section h2 {
+      color: #33691e;
+    }
+    .card-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 10px;
+      width: 300px;
+    }
+    .menu-container {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+    .menu-item {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    .form-section {
+      background-color: #e8f5e9;
+      padding: 30px 20px;
+    }
+    input[type="text"], input[type="email"] {
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .form-section button {
+      margin-top: 10px;
+      background-color: #43a047;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">LOGO</div>
+    <nav>
+      <a href="#">กิจกรรม</a>
+      <a href="#">สินค้า</a>
+      <a href="#">เข้าร่วม</a>
+      <a href="#">ติดต่อ</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>สุขทุกคำ กับ CP Delight</h1>
+    <p>อร่อยง่าย สุขภาพดีทุกมื้อ กับกิจกรรมสุดสนุกและเมนูดีต่อใจ</p>
+    <button>ดูรายละเอียดกิจกรรม</button>
+  </section>
+
+  <section class="section">
+    <h2>🎉 กิจกรรมล่าสุด</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Happy to Surprise</h3>
+        <p>ร่วมสนุกกับกิจกรรมเปิดตัวสินค้าใหม่ ชิมเมนูนุ่ม ซิงของรางวัล และพบกับดีลพิเศษ</p>
+      </div>
+      <div class="card">
+        <h3>Delight Your Day Challenge</h3>
+        <p>แชร์เมนูสุขภาพในสไตล์คุณ พร้อมลุ้นรับของรางวัลและคูปองฟรี</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>🍗 เมนูยอดนิยม</h2>
+    <div class="menu-container">
+      <div class="menu-item">อกไก่พริกไทยดำ</div>
+      <div class="menu-item">อกไก่เทอริยากิ</div>
+      <div class="menu-item">ไข่ต้มสูตรนุ่ม</div>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <h2>📩 สมัครเข้าร่วมกิจกรรม</h2>
+    <p>กรอกแบบฟอร์มเพื่อรับข่าวสาร โปรโมชั่น และสิทธิพิเศษก่อนใคร</p>
+    <form>
+      <input type="text" placeholder="ชื่อ - นามสกุล">
+      <input type="email" placeholder="อีเมล">
+      <button type="submit">สมัครเลย</button>
+    </form>
+  </section>
+</body>
+</html>
