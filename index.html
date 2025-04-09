@@ -1,170 +1,31 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CP Delight</title>
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Sarabun', sans-serif;
-    }
-
-    body {
-      background-color: #fffef9;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #fff;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #eee;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-
-    .logo-placeholder {
-      width: 140px;
-      height: 40px;
-      background: #ddd;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      color: #555;
-      border-radius: 8px;
-    }
-
-    nav a {
-      margin-left: 1.5rem;
-      text-decoration: none;
-      color: #444;
-      font-weight: 600;
-    }
-
-    .hero {
-      background: #d6f5d6;
-      text-align: center;
-      padding: 4rem 2rem 3rem;
-    }
-
-    .hero h1 {
-      font-size: 2rem;
-      color: #006600;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      color: #444;
-      margin-bottom: 2rem;
-    }
-
-    .hero button {
-      background: #00b300;
-      color: white;
-      border: none;
-      padding: 0.8rem 2rem;
-      border-radius: 30px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-
-    .section {
-      padding: 3rem 2rem;
-    }
-
-    .section h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: #222;
-    }
-
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: #fff;
-      border: 1px solid #eee;
-      border-radius: 12px;
-      padding: 1.5rem;
-      flex: 1 1 calc(50% - 1.5rem);
-      min-width: 260px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-
-    .card h3 {
-      font-size: 1.2rem;
-      color: #009900;
-      margin-bottom: 0.5rem;
-    }
-
-    .card p {
-      color: #555;
-      font-size: 0.95rem;
-    }
-
-    .popular-menu {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .menu-item {
-      background: #f2f2f2;
-      padding: 1rem 1.5rem;
-      border-radius: 20px;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-
-    .form-section {
-      background: #e9fff0;
-      padding: 3rem 2rem;
-    }
-
-    .form-section form {
-      max-width: 500px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .form-section input[type="text"],
-    .form-section input[type="email"] {
-      padding: 0.75rem 1rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-
-    .form-section button {
-      background: #00b300;
-      color: white;
-      border: none;
-      padding: 0.75rem;
-      font-size: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #777;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Sarabun', sans-serif; }
+    body { background-color: #fffef9; color: #333; line-height: 1.6; }
+    header { background: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 999; }
+    .logo-placeholder { width: 140px; height: 40px; background: #ddd; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #555; border-radius: 8px; }
+    nav a { margin-left: 1.5rem; text-decoration: none; color: #444; font-weight: 600; }
+    section { padding: 3rem 2rem; max-width: 1200px; margin: auto; }
+    .hero { background: #d6f5d6; text-align: center; padding: 4rem 2rem; }
+    .hero h1 { font-size: 2.5rem; color: #006600; margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; color: #444; margin-bottom: 2rem; }
+    .hero button { background: #00b300; color: white; border: none; padding: 0.8rem 2rem; border-radius: 30px; font-size: 1rem; cursor: pointer; }
+    h2.section-title { font-size: 1.75rem; color: #2c3e50; margin-bottom: 1rem; }
+    .cards, .activities, .menus, .values, .characters { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-around; }
+    .card, .value-box, .character-box { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 1.5rem; flex: 1 1 calc(45% - 1.5rem); min-width: 260px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+    .card h3, .value-box h3, .character-box h3 { font-size: 1.2rem; color: #009900; margin-bottom: 0.5rem; }
+    .card p, .value-box p, .character-box p { color: #555; font-size: 0.95rem; }
+    .menu-item { background: #f2f2f2; padding: 1rem 1.5rem; border-radius: 20px; font-weight: 600; font-size: 1rem; }
+    .form-section form { max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 1rem; }
+    input[type="text"], input[type="email"] { padding: 0.75rem 1rem; border: 1px solid #ccc; border-radius: 8px; }
+    button.submit-btn { background: #00b300; color: white; border: none; padding: 0.75rem; font-size: 1rem; border-radius: 8px; cursor: pointer; }
+    footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #777; background: #fafafa; margin-top: 2rem; }
   </style>
 </head>
 <body>
@@ -173,51 +34,86 @@
     <nav>
       <a href="#activities">กิจกรรม</a>
       <a href="#products">สินค้า</a>
+      <a href="#values">จุดเด่น</a>
+      <a href="#characters">มาสคอต</a>
       <a href="#join">เข้าร่วม</a>
-      <a href="#contact">ติดต่อ</a>
     </nav>
   </header>
-
   <section class="hero">
     <h1>สุขทุกคำ กับ CP Delight</h1>
-    <p>อร่อยง่าย สุขภาพดีทุกมื้อ กับกิจกรรมสุดสนุกและเมนูดีต่อใจ</p>
+    <p>อร่อย ทานง่าย สมดุลได้ ไม่ต้องซีเรียส — CP Delight ทำให้คุณสนุกกับไลฟ์สไตล์สุขภาพดีในแบบของคุณ</p>
     <button>ดูรายละเอียดกิจกรรม</button>
   </section>
-
-  <section class="section" id="activities">
-    <h2>🎉 กิจกรรมล่าสุด</h2>
+  <section id="activities">
+    <h2 class="section-title">กิจกรรมล่าสุด</h2>
     <div class="cards">
       <div class="card">
-        <h3>Happy to Surprise</h3>
-        <p>ร่วมสนุกกับกิจกรรมเปิดตัวสินค้าใหม่ ชิมเมนูใหม่ ชิงของรางวัล และพบกับดีลพิเศษ</p>
+        <h3>Delight to Share</h3>
+        <p>ร่วมสนุกกับชาเลนจ์ Tiktok หรือแชร์เมนู CP Delight ของคุณ พร้อมลุ้นรางวัลคูปองและสินค้าใหม่</p>
       </div>
       <div class="card">
-        <h3>Delight Your Day Challenge</h3>
-        <p>แชร์เมนูสุขภาพในสไตล์คุณ พร้อมลุ้นรับของรางวัลและคูปองฟรี</p>
+        <h3>Delight Jam</h3>
+        <p>ประกวดแต่งเพลงและเต้น #DelightJamChallenge กับเพื่อนๆ รับสิทธิร่วมทีมทำอาหารกับศิลปิน</p>
+      </div>
+      <div class="card">
+        <h3>Chicken Around the World</h3>
+        <p>กิจกรรมสุ่มเมนูอกไก่รอบโลก 5 ประเทศ พร้อมสะสมกล่องครบลุ้นรางวัลสุดพิเศษ</p>
       </div>
     </div>
   </section>
-
-  <section class="section" id="products">
-    <h2>🍗 เมนูยอดนิยม</h2>
-    <div class="popular-menu">
-      <div class="menu-item">อกไก่พริกไทยดำ</div>
-      <div class="menu-item">อกไก่เทอริยากิ</div>
-      <div class="menu-item">ไข่ต้มสูตรนุ่ม</div>
+  <section id="products">
+    <h2 class="section-title">เมนูยอดนิยม</h2>
+    <div class="menus">
+      <div class="menu-item">อกไก่อบพริกไทยดำ</div>
+      <div class="menu-item">อกไก่อบเทอริยากิ</div>
+      <div class="menu-item">อกไก่สูตรคีโต</div>
+      <div class="menu-item">เมนู Mystery Box</div>
     </div>
   </section>
-
+  <section id="values">
+    <h2 class="section-title">จุดเด่นของแบรนด์</h2>
+    <div class="values">
+      <div class="value-box">
+        <h3>วัตถุดิบคุณภาพ</h3>
+        <p>อกไก่จากฟาร์มของ CP ปลอดสารเร่งโต ไม่มีฮอร์โมน ไม่ใช้ยาปฏิชีวนะ</p>
+      </div>
+      <div class="value-box">
+        <h3>อร่อยและสุขภาพดี</h3>
+        <p>ผสานรสชาติที่คนรุ่นใหม่ชื่นชอบ กับคุณค่าทางโภชนาการที่ลงตัว</p>
+      </div>
+      <div class="value-box">
+        <h3>สะดวก คุ้มค่า</h3>
+        <p>เวฟแล้วกินได้ บรรจุภัณฑ์ใช้งานง่าย เหมาะกับนักศึกษาและ First Jobber</p>
+      </div>
+      <div class="value-box">
+        <h3>พร้อมสร้าง UGC</h3>
+        <p>มีพื้นที่ให้คุณแชร์เมนู CP Delight แบบที่คุณเป็น สร้างความผูกพันระหว่างแบรนด์และลูกค้า</p>
+      </div>
+    </div>
+  </section>
+  <section id="characters">
+    <h2 class="section-title">แบรนด์มาสคอต: น้องไลท์ไลท์</h2>
+    <div class="characters">
+      <div class="character-box">
+        <h3>สดใส เข้าถึงง่าย</h3>
+        <p>สื่อสารความสนุก ความสุข และสุขภาพดีในสไตล์ Gen Z ไม่เคร่งเครียดแต่ได้ประโยชน์</p>
+      </div>
+      <div class="character-box">
+        <h3>กิจกรรมร่วมสนุก</h3>
+        <p>น้องไลท์ไลท์นำทีมในแคมเปญต่าง ๆ เช่น Flappy LightLight และเกม Delight Kitchen</p>
+      </div>
+    </div>
+  </section>
   <section class="form-section" id="join">
-    <h2 style="text-align:center">✉️ สมัครเข้าร่วมกิจกรรม</h2>
+    <h2 style="text-align:center">สมัครเข้าร่วมกิจกรรม</h2>
     <form>
       <input type="text" placeholder="ชื่อ - นามสกุล" required />
       <input type="email" placeholder="อีเมล" required />
-      <button type="submit">ลงทะเบียน</button>
+      <button type="submit" class="submit-btn">สมัครเลย</button>
     </form>
   </section>
-
-  <footer id="contact">
-    ติดต่อเรา | © 2025 CP Delight. All Rights Reserved.
+  <footer>
+    © 2025 CP Delight — อร่อยทุกคำ ทานง่ายได้สุขภาพดี ไม่ต้องซีเรียส
   </footer>
 </body>
 </html>
